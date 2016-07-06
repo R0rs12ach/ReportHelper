@@ -1,0 +1,30 @@
+{
+  "name": "reportor",
+  "version": "0.0.1",
+  "description": "This app could free me from sending email manually each friday",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "devDependencies": {
+    "typescript": "1.8.10"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R0rs12ach/ReportHelper.git"
+  },
+  "keywords": [
+    "Automatly",
+    "Efficiently",
+    "Productive"
+  ],
+  "author": "R0rs12ach",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/R0rs12ach/ReportHelper/issues"
+  },
+  "homepage": "https://github.com/R0rs12ach/ReportHelper#readme"
+}

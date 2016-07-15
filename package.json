@@ -1,7 +1,7 @@
 {
   "name": "reportor",
   "version": "0.0.1",
-  "description": "This app could free me from sending email manually each friday",
+  "description": "This app could free me from sending working-email manually each friday",
   "main": "app.js",
   "scripts": {
     "test": "npm test"

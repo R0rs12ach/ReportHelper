@@ -17,7 +17,15 @@
     * `yum install python-lxml`
     * 不用再去使用`pip install lxml`，因为执行过了上一步就相当于安装了`lxml`的python库
 * 安装`python-docx`,使用`easy_install python-docx`即可完成安装
-* 执行`python ReporterHelp.py`即可生成一个以docx为后缀的周报文档模板，可供用户酌情修改
+* 执行`python report_document.py`即可生成一个以docx为后缀的周报文档模板，可供用户酌情修改
+* 需要配置`crond`，这样就可以直接使用CentOS自带的定时器在指定时间执行发送周报的脚本
+* 执行`crontab -e`后，配置如下内容即可[注意：**其中的4表示周五，absolute_path需要用户自己填写**]
+    ```
+    SHELL=/bin/bash
+    PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+    MAILTO=root
+    20 17 * * 4 sh /absolute_path/email_auto_send.sh
+    ``` 
 
 ## 代码安装
 待续……

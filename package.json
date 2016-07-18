@@ -4,13 +4,17 @@
   "description": "This app could free me from sending working-email manually each friday",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "dev": "tsc --watch"
   },
   "devDependencies": {
     "typescript": "1.8.10"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.17"
+    "angular2": "2.0.0-beta.17",
+    "es6-shim": "^0.35.1",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.6",
+    "zone.js": "^0.6.12"
   },
   "repository": {
     "type": "git",

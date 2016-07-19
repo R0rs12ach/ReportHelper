@@ -23,7 +23,7 @@ export class TodoStore {
     todos: Array<Todo>;
 
     constructor() {
-        let persistedTodos = JSON.parse(localStorage.getItem('reporter-todos') || '[]');
+        let persistedTodos = JSON.parse(localStorage.getItem('reportor-todos') || '[]');
 
         this.todos = persistedTodos.map( (todo: {_title: String, completed: Boolean}) => {
             let collection = new Todo(todo._title);
@@ -33,7 +33,7 @@ export class TodoStore {
     }
 
     private updateStore() {
-        localStorage.setItem('reporter-todos', JSON.stringify(this.todos));
+        localStorage.setItem('reportor-todos', JSON.stringify(this.todos));
     }
 
     private getWithCompleted(completed: Boolean) {

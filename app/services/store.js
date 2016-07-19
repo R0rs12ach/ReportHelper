@@ -20,7 +20,7 @@ var Todo = (function () {
 exports.Todo = Todo;
 var TodoStore = (function () {
     function TodoStore() {
-        var persistedTodos = JSON.parse(localStorage.getItem('reporter-todos') || '[]');
+        var persistedTodos = JSON.parse(localStorage.getItem('reportor-todos') || '[]');
         this.todos = persistedTodos.map(function (todo) {
             var collection = new Todo(todo._title);
             collection.completed = todo.completed;
@@ -28,7 +28,7 @@ var TodoStore = (function () {
         });
     }
     TodoStore.prototype.updateStore = function () {
-        localStorage.setItem('reporter-todos', JSON.stringify(this.todos));
+        localStorage.setItem('reportor-todos', JSON.stringify(this.todos));
     };
     TodoStore.prototype.getWithCompleted = function (completed) {
         return this.todos.filter(function (todo) { return todo.completed === completed; });

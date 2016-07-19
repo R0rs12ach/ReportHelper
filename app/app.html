@@ -1,12 +1,12 @@
 <section class="todoapp">
 	<header class="header">
 		<h1>任务清单</h1>
-		<input class="new-todo" placeholder="接下来要做?" autofocus="" [(ngModel)]="newTodoText" (keyup.enter)="addTodo()">
+		<input class="new-todo" placeholder="接下来要做?" autofocus="" [(ngModel)]="nextTodoText" (keyup.enter)="addTodo()">
 	</header>
 	<section class="main" *ngIf="todoStore.todos.length > 0">
 		<input class="toggle-all" type="checkbox" *ngIf="todoStore.todos.length" #toggleall [checked]="todoStore.allCompleted()" (click)="todoStore.setAllTo(toggleall.checked)">
 		<ul class="todo-list">
-			<li *ngFor="#todo of todoStore.todos" [class.completed]="todo.completed" [class.editing]="todo.editing">
+			<li *ngFor="let todo of todoStore.todos" [class.completed]="todo.completed" [class.editing]="todo.editing">
 				<div class="view">
 					<input class="toggle" type="checkbox" (click)="toggleCompletion(todo)" [checked]="todo.completed">
 					<label (dblclick)="editTodo(todo)">{{todo.title}}</label>
@@ -17,7 +17,7 @@
 		</ul>
 	</section>
 	<footer class="footer" *ngIf="todoStore.todos.length > 0">
-		<span class="todo-count"><strong>{{todoStore.getRemaining().length}}</strong> {{todoStore.getRemaining().length == 1 ? 'item' : 'items'}} left</span>
+		<span class="todo-count"><strong>{{todoStore.getRemaining().length}}</strong>个任务遗留</span>
 		<button class="clear-completed" *ngIf="todoStore.getCompleted().length > 0" (click)="removeCompleted()">清空已完成</button>
 	</footer>
 </section>

@@ -17,6 +17,24 @@
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>    
 </head>
 <body>
-    
+    <todo-app></todo-app>
+    <footer class="info">
+        <p>双击开始编辑一条任务</p>
+        <p>
+            有反馈？联系<a href="https://github.com/R0rs12ach">R0rs12ach</a>
+        </p>
+        <p>感谢<a href="http://todomvc.com">TodoMVC</a>提供现成的样式</p>
+    </footer>
+    <script>
+        System.config({
+            packages: {
+                'app': {
+                    format: 'cjs',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/bootstrap');
+    </script>
 </body>
 </html>
